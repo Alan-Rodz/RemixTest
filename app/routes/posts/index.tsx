@@ -20,7 +20,7 @@ export const loader = async () => {
 export default function Posts() {
   const { posts } = useLoaderData() as LoaderData;
   return (
-    <main>
+    <main className='mx-auto max-w-4xl'>
       <h1>Posts</h1>
       <ul>
         {posts.map((post) => (
