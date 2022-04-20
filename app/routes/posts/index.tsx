@@ -5,9 +5,9 @@ import { getPosts } from '~/models/post.server';
 
 // ********************************************************************************
 // --- Types ----------------------------------------------------------------------
-type LoaderData = { 
+type LoaderData = {
   // this is a handy way to say: 'posts is whatever type getPosts resolves to'
-  posts: Awaited<ReturnType<typeof getPosts>>; 
+  posts: Awaited<ReturnType<typeof getPosts>>;
 };
 
 export const loader = async () => {
@@ -20,8 +20,11 @@ export const loader = async () => {
 export default function Posts() {
   const { posts } = useLoaderData() as LoaderData;
   return (
-    <main className='mx-auto max-w-4xl'>
+    <main className={'mx-auto max-w-4xl'}>
       <h1>Posts</h1>
+      <Link to={'admin'} className={'text-red-600 underline'}>
+        Admin
+      </Link>
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
