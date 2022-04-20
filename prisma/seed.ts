@@ -42,8 +42,8 @@ async function seed() {
   
   const posts = [
     {
-      slug: "my-first-post",
-      title: "My First Post",
+      slug: 'my-first-post',
+      title: 'My First Post',
       markdown: `
   # This is my first post
   
@@ -51,8 +51,8 @@ async function seed() {
       `.trim(),
     },
     {
-      slug: "90s-mixtape",
-      title: "A Mixtape I Made Just For You",
+      slug: '90s-mixtape',
+      title: 'A Mixtape I Made Just For You',
       markdown: `
   # 90s Mixtape
   
